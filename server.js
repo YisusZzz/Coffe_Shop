@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 // --- TUS RUTAS API (Estas están bien) ---
 
 app.get("/api/productos", (req, res) => {
-  const sqlQuery = "SELECT * FROM Productos";
+  const sqlQuery = "SELECT * FROM productos";
   // Usamos el pool para hacer la consulta
   db.query(sqlQuery, (err, results) => {
     if (err) {
@@ -61,7 +61,7 @@ app.post("/api/pedidos", (req, res) => {
       }
 
       const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-      const pedidoQuery = "INSERT INTO Pedidos (cliente_id, total, estado) VALUES (?, ?, ?)";
+      const pedidoQuery = "INSERT INTO pedidos (cliente_id, total, estado) VALUES (?, ?, ?)";
 
       connection.query(pedidoQuery, [1, total, "En preparación"], (err, result) => {
         if (err) {
@@ -72,7 +72,7 @@ app.post("/api/pedidos", (req, res) => {
         }
         const pedidoId = result.insertId;
         const detallesValues = carrito.map((item) => [pedidoId, item.id, item.cantidad, item.precio]);
-        const detallesQuery = "INSERT INTO Detalles_Pedido (pedido_id, producto_id, cantidad, precio_unitario) VALUES ?";
+        const detallesQuery = "INSERT INTO detalles_pedido (pedido_id, producto_id, cantidad, precio_unitario) VALUES ?";
 
         connection.query(detallesQuery, [detallesValues], (err, result) => {
           if (err) {
@@ -102,7 +102,7 @@ app.post("/api/suscripciones", (req, res) => {
   const { email } = req.body;
   if (!email) return res.status(400).json({ error: "Email obligatorio." });
 
-  const sqlQuery = "INSERT INTO Suscripciones (email) VALUES (?)";
+  const sqlQuery = "INSERT INTO suscripciones (email) VALUES (?)";
   db.query(sqlQuery, [email], (err, result) => {
     if (err) {
       if (err.code === "ER_DUP_ENTRY") return res.status(409).json({ message: "Correo ya registrado." });
