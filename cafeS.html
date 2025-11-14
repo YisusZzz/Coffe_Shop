@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos esenciales del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aromas de la Sierra</title>
+    <!-- Importación de estilos externos:-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="styleC.css">
+
+</head>
+
+<body>
+    <!-- Barra de navegación fija en la parte superior.
+         Contiene el logotipo, nombre de la marca y accesos rápidos a secciones del sitio. -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="cafeS.html"> <img src="LogoP.png" alt="Logo de Aromas de la Sierra">
+                    <span class="brand-text">Café Aromas de la Sierra</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="cafeS.html#contacto">
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Contacto</span>
+                </a>
+
+                <div class="navbar-item">
+                    <a href="cafeS.html#productos" class="button is-primary is-rounded">
+                        <strong>Comprar Ahora</strong>
+                    </a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="carrito.html" class="button is-info is-rounded">
+                        <span class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                        <span id="cart-counter" class="tag is-danger is-rounded" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal con imagen de fondo, título y botones de llamada a la acción. -->
+    <section class="hero is-fullheight" id="hero-section">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 has-text-white animated-title" id="main-hero-title">
+                    El Alma de la Sierra en Cada Taza
+                </h1>
+                <p class="subtitle is-3 has-text-white-ter hero-typed-text" id="typed-subtitle">
+                </p>
+                <div class="buttons is-centered mt-5">
+                    <a href="#productos" class="button is-primary is-large is-rounded hero-button">
+                        <span class="icon is-medium">
+                            <i class="fas fa-coffee"></i>
+                        </span>
+                        <span>Explora Nuestros Cafés</span>
+                    </a>
+                    <a href="#historia"
+                        class="button is-secondary is-large is-rounded hero-button is-outlined is-inverted">
+                        <span class="icon is-medium">
+                            <i class="fas fa-seedling"></i>
+                        </span>
+                        <span>Nuestra Historia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de propuestas de valor con iconos y descripciones. -->
+    <section class="section value-prop-section" id="historia">
+        <div class="container">
+            <div class="columns is-centered">
+
+                <div class="column is-one-third">
+                    <div class="card value-prop-card hidden-for-animation">
+                        <div class="card-content has-text-centered">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-mountain fa-3x"></i>
+                            </div>
+                            <h3 class="title is-4 mt-5">Origen Único</h3>
+                            <p class="subtitle is-6">Cultivado a más de 1,200 metros en la Sierra Madre del Sur, donde
+                                el
+                                clima y la altitud crean un grano de sabor inigualable.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card value-prop-card hidden-for-animation">
+                        <div class="card-content has-text-centered">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-fire fa-3x"></i>
+                            </div>
+                            <h3 class="title is-4 mt-5">Tostado Artesanal</h3>
+                            <p class="subtitle is-6">Tostamos el café en lotes pequeños, controlando la temperatura y el
+                                tiempo a la perfección para resaltar sus notas más dulces y complejas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card value-prop-card hidden-for-animation">
+                        <div class="card-content has-text-centered">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-handshake fa-3x"></i>
+                            </div>
+                            <h3 class="title is-4 mt-5">Comercio Justo</h3>
+                            <p class="subtitle is-6">Colaboramos directamente con las familias caficultoras,
+                                garantizando un
+                                pago justo que apoya el desarrollo de nuestra comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de productos destacados con tarjetas, imágenes y botones de acción. -->
+    <section class="section products-section" id="productos">
+        <div class="section-title-wrapper has-text-centered">
+            <h2 class="title is-2 has-text-white">Explora Nuestros Cafés</h2>
+            <p class="subtitle is-5 has-text-white-ter">Del cafeto a tu taza, una experiencia inigualable.</p>
+        </div>
+
+        <div class="container mt-6">
+            <div class="columns is-centered is-multiline">
+
+                <div class="column is-one-third product-item hidden-for-animation">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="cafe1.png" alt="Bolsa de café tueste medio">
+                            </figure>
+                            <div class="product-overlay">
+                                <a href="#" class="button is-primary is-rounded quick-view-button"
+                                    data-product-id="1">Vista
+                                    Rápida</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 product-name">Mezcla de la Casa</p>
+                            <p class="subtitle is-6 product-roast">Tostado Medio</p>
+                            <div class="content product-description">
+                                Notas de chocolate, piloncillo y un toque cítrico. Perfecto para empezar el día.
+                            </div>
+                            <div class="level is-mobile mt-4">
+                                <div class="level-left">
+                                    <p class="level-item product-price is-size-5 has-text-weight-bold">$250 MXN</p>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button is-primary is-rounded add-to-cart-button">
+                                        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                                        <span>Añadir</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third product-item hidden-for-animation">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="cafe2.png" alt="Bolsa de café tueste oscuro">
+                            </figure>
+                            <div class="product-overlay">
+                                <a href="#" class="button is-primary is-rounded quick-view-button"
+                                    data-product-id="2">Vista
+                                    Rápida</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 product-name">Reserva del Fundador</p>
+                            <p class="subtitle is-6 product-roast">Tostado Oscuro</p>
+                            <div class="content product-description">
+                                Sabor intenso con notas a cacao amargo y nueces tostadas. Para paladares exigentes.
+                            </div>
+                            <div class="level is-mobile mt-4">
+                                <div class="level-left">
+                                    <p class="level-item product-price is-size-5 has-text-weight-bold">$320 MXN</p>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button is-primary is-rounded add-to-cart-button">
+                                        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                                        <span>Añadir</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third product-item hidden-for-animation">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="cafe3.png" alt="Bolsa de café especial">
+                            </figure>
+                            <div class="product-overlay">
+                                <a href="#" class="button is-primary is-rounded quick-view-button"
+                                    data-product-id="3">Vista
+                                    Rápida</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 product-name">Edición Limitada</p>
+                            <p class="subtitle is-6 product-roast">Tostado de Origen Único</p>
+                            <div class="content product-description">
+                                Cada temporada, un nuevo café. Descubre perfiles de sabor únicos y sorpréndete.
+                            </div>
+                            <div class="level is-mobile mt-4">
+                                <div class="level-left">
+                                    <p class="level-item product-price is-size-5 has-text-weight-bold">$380 MXN</p>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button is-primary is-rounded add-to-cart-button">
+                                        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                                        <span>Añadir</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de vista rápida del producto -->
+    <div class="modal" id="product-quick-view-modal" data-current-product-id="">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modal-product-name">Nombre del Producto</p>
+                <button class="delete" aria-label="close" id="close-modal"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="columns">
+                    <div class="column is-half">
+                        <figure class="image is-4by3">
+                            <img id="modal-product-image" src="" alt="Imagen del producto">
+                        </figure>
+                    </div>
+                    <div class="column is-half">
+                        <p class="subtitle is-5" id="modal-product-roast">Tipo de Tostado</p>
+                        <p class="content" id="modal-product-description">Descripción detallada del producto.</p>
+                        <p class="title is-4 has-text-primary" id="modal-product-price">Precio</p>
+                        <div class="field">
+                            <label class="label">Cantidad</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="modal-product-quantity">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="modal-add-to-cart-button"
+                            class="button is-primary is-large is-fullwidth mt-4 is-rounded">
+                            <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                            <span>Añadir al Carrito</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer con información de contacto, enlaces rápidos y suscripción al boletín. -->
+    <footer class="footer footer-custom" id="contacto">
+        <div class="container">
+            <div class="columns">
+
+                <div class="column is-one-third">
+                    <img src="LogoP.png" alt="Café Aromas de la Sierra" style="max-width: 150px; margin-bottom: 1rem;">
+
+                    <p class="mb-4">
+                        Llevando la tradición y el sabor de la sierra de Michoacán directamente a tu taza.
+                    </p>
+
+                    <p>📍 Huetamo, Michoacán, México</p>
+                    <p>📞 +52 (767) 103-3772</p>
+                    <p>✉️ contacto@aromasdelasierra.com</p>
+                </div>
+
+                <div class="column is-one-third">
+                    <h4 class="title is-5 footer-title">Explora</h4>
+                    <ul>
+                        <li><a href="#hero-section">Inicio</a></li>
+                        <li><a href="#productos">Nuestro Café</a></li>
+                        <li><a href="#historia">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-one-third">
+                    <h4 class="title is-5 footer-title">Boletín Informativo</h4>
+                    <p>Recibe ofertas especiales, noticias sobre nuevas cosechas y consejos de preparación. ¡Suscríbete!
+                    </p>
+
+                    <form id="newsletter-form">
+                        <div class="field mt-4">
+                            <div class="control">
+                                <input id="newsletter-email" class="input is-rounded" type="email"
+                                    placeholder="Tu correo electrónico" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button id="newsletter-button"
+                                    class="button is-primary is-rounded is-fullwidth">Suscribirse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom has-text-centered">
+                <hr>
+                <p>&copy; 2025 Café Aromas de la Sierra. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Importación de scripts externos y personalizados -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

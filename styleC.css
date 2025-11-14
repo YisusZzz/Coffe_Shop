@@ -1,0 +1,664 @@
+/* 1. Importamos una tipografía desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* 2. Estilos para el Navbar principal */
+.navbar {
+    background-color: #2a1a1a;
+    /* Un color café oscuro, casi negro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para darle profundidad */
+}
+
+/* 3. Estilos para el logo y el nombre de la marca */
+.navbar-brand .navbar-item {
+    padding: 5px 15px;
+    /* Ajustamos el padding */
+}
+
+.navbar-brand img {
+    max-height: 50px !important;
+    /* Damos un tamaño fijo y visible al logo */
+    margin-right: 10px;
+    /* Espacio entre el logo y el texto */
+}
+
+.brand-text {
+    color: #f5f5dc;
+    /* Color crema/beige para el texto */
+    font-family: 'Lora', serif;
+    /* La tipografía elegante que importamos */
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* 4. Estilos para los enlaces del menú */
+.navbar-menu .navbar-item {
+    color: #f5f5dc;
+    /* Mismo color crema */
+    font-family: 'Lato', sans-serif;
+    /* Tipografía limpia para los enlaces */
+    font-weight: 700;
+    transition: all 0.3s ease;
+    /* Transición suave para el efecto hover */
+}
+
+/* 5. Efecto Hover para los enlaces (cuando pasas el mouse por encima) */
+.navbar-menu .navbar-item:hover {
+    background-color: #3f2a2a;
+    /* Un café un poco más claro */
+    color: #ffffff;
+    /* El texto se vuelve blanco puro */
+}
+
+/* 6. Estilos para el botón "Comprar Ahora" */
+.navbar .button.is-primary {
+    background-color: #a16a56;
+    /* Un color café con leche, que contrasta */
+    border: none;
+    font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .button.is-primary:hover {
+    background-color: #b9816b;
+    /* Un tono más claro al pasar el mouse */
+}
+
+/* --- ESTILOS MEJORADOS PARA LA SECCIÓN HERO --- */
+
+#hero-section {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.hero-body {
+    padding-top: 5rem;
+
+    padding-bottom: 5rem;
+}
+
+
+.hero .title {
+    font-family: 'Lora', serif;
+
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 1.5rem;
+}
+
+
+.hero .subtitle {
+    font-family: 'Lato', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+    min-height: 2.5em;
+
+    line-height: 1.2;
+}
+
+
+.hero-button {
+    margin: 0 10px;
+
+    min-width: 220px;
+
+    border-width: 2px;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.hero-button.is-primary {
+    background-color: #a16a56;
+
+    border-color: #a16a56;
+}
+
+.hero-button.is-primary:hover {
+    background-color: #b9816b;
+    border-color: #b9816b;
+}
+
+
+.hero-button.is-secondary.is-outlined.is-inverted {
+    color: #d4ac6e;
+
+    border-color: #d4ac6e;
+
+}
+
+.hero-button.is-secondary.is-outlined.is-inverted:hover {
+    background-color: #d4ac6e;
+
+    color: #2a1a1a;
+
+    border-color: #d4ac6e;
+
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-title {
+    animation: fadeInDown 1s ease-out forwards;
+    animation-delay: 0.5s;
+    /* Retraso para que aparezca después de la carga */
+    opacity: 0;
+    /* Empieza invisible */
+}
+
+/* Animación para los botones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-button {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+    /* Retraso para que aparezca después del título y subtítulo */
+    opacity: 0;
+    /* Empieza invisible */
+}
+
+/* Estilo para el cursor de tipeo */
+.hero-typed-text::after {
+    content: '|';
+    /* El cursor que parpadea */
+    animation: blink-caret 0.75s step-end infinite;
+    font-weight: bold;
+    color: #f5f5dc;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #f5f5dc;
+    }
+}
+
+
+
+
+/* --- FONDO CON IMAGEN DE GRANOS DE CAFÉ --- */
+.value-prop-section {
+    position: relative;
+    /* Necesario para la superposición */
+    padding: 6rem 1.5rem;
+}
+
+/* Creamos una superposición oscura y semitransparente */
+.value-prop-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* La URL de la nueva imagen */
+    background-image: url('sfondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Mismo efecto parallax que el héroe */
+    z-index: 1;
+    /* Se asegura de que esté detrás del contenido */
+    /* El filtro oscuro para la legibilidad */
+    filter: brightness(0.7);
+}
+
+/* Ajustamos el contenedor para que el contenido se ponga por encima de la imagen */
+.value-prop-section .container {
+    position: relative;
+    z-index: 2;
+    /* Se asegura de que el contenido esté al frente */
+}
+
+
+.value-prop-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Fondo blanco ligeramente translúcido */
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.value-prop-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon-wrapper {
+    margin: 0 auto 1.5rem auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background-color: #4a2c2a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+
+.icon-wrapper i {
+    color: #f5f5dc;
+
+    transition: transform 0.3s ease;
+}
+
+
+.value-prop-card:hover .icon-wrapper {
+    background-color: #a16a56;
+
+}
+
+.value-prop-card:hover .icon-wrapper i {
+    transform: scale(1.1);
+
+}
+
+.value-prop-card .title {
+    color: #4a2c2a;
+
+}
+
+
+.hidden-for-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+    /* Transición para cuando aparezcan */
+}
+
+
+.show-after-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.columns .column:nth-child(2) .hidden-for-animation {
+    transition-delay: 0.2s;
+}
+
+.columns .column:nth-child(3) .hidden-for-animation {
+    transition-delay: 0.4s;
+}
+
+/* --- ESTILOS MEJORADOS PARA LA SECCIÓN DE PRODUCTOS --- */
+
+.products-section {
+    position: relative;
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+    /* Importante para el separador inferior */
+}
+
+/* Fondo con imagen de granos de café cayendo/tostando */
+.products-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('fondot.png');
+    /* IMAGEN DE FONDO RECOMENDADA */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+    filter: brightness(0.6);
+    /* Oscurece la imagen para mayor legibilidad */
+}
+
+.products-section .container,
+.products-section .section-title-wrapper {
+    position: relative;
+    z-index: 2;
+    /* Asegura que el contenido esté por encima de la imagen */
+}
+
+.products-section .title,
+.products-section .subtitle {
+    font-family: 'Lora', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo general de las tarjetas de producto */
+.product-card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Fondo blanco semitransparente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    /* Importante para la imagen del overlay */
+}
+
+/* Efecto hover: la tarjeta se eleva y muestra el botón de vista rápida */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .card-image {
+    position: relative;
+}
+
+/* Overlay para el botón de vista rápida */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Capa oscura semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Empieza oculto */
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+    /* Se muestra al pasar el mouse */
+}
+
+.quick-view-button {
+    font-weight: bold;
+    background-color: #d4ac6e;
+    /* Color ámbar dorado */
+    color: #4a2c2a;
+    /* Texto café oscuro */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.quick-view-button:hover {
+    background-color: #b9816b;
+    /* Un tono más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.product-name {
+    font-family: 'Lora', serif;
+    color: #4a2c2a;
+}
+
+.product-roast {
+    font-family: 'Lato', sans-serif;
+    color: #a16a56;
+    /* Color café con leche */
+}
+
+.product-price {
+    color: #d4ac6e;
+    /* Ámbar dorado para el precio */
+}
+
+/* Botón Añadir al Carrito en la tarjeta */
+.add-to-cart-button {
+    background-color: #a16a56;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #b9816b;
+}
+
+/* Estilos para el MODAL de Vista Rápida */
+.modal-card-head {
+    background-color: #4a2c2a;
+    color: white;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-card-title {
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+.modal-card-body {
+    padding: 2.5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.modal-card-body .title.is-4 {
+    color: #d4ac6e;
+}
+
+.modal-card-body .subtitle {
+    color: #a16a56;
+}
+
+.modal-card {
+    border-radius: 10px;
+}
+
+/* --- ESTILOS PARA EL FOOTER --- */
+
+.footer-custom {
+    background-color: #2a1a1a;
+    /* Mismo café oscuro que el navbar */
+    color: #f5f5dc;
+    /* Texto color crema */
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    /* Relleno generoso */
+}
+
+.footer-logo {
+    max-width: 200px;
+    /* Tamaño del logo en el footer */
+}
+
+.footer-title {
+    color: #ffffff;
+    /* Títulos en blanco para que destaquen */
+    font-family: 'Lora', serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d4ac6e;
+    /* Borde inferior con el color ámbar */
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    /* Para que el borde solo ocupe el ancho del texto */
+}
+
+.footer-custom a {
+    color: #f5f5dc;
+    transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+    color: #ffffff;
+    /* Enlaces se vuelven blancos al pasar el mouse */
+}
+
+.footer-custom ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-custom ul li {
+    margin-bottom: 0.75rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.contact-item .icon {
+    margin-right: 10px;
+    color: #d4ac6e;
+    /* Iconos en color ámbar */
+}
+
+.footer-custom .button.is-primary {
+    background-color: #d4ac6e;
+    /* Botón de suscripción en ámbar */
+    color: #4a2c2a;
+    font-weight: bold;
+    border: none;
+}
+
+.footer-custom .button.is-primary:hover {
+    background-color: #b9816b;
+}
+
+.footer-custom .input {
+    background-color: #3f2a2a;
+    border-color: #5a4a4a;
+    color: #ffffff;
+}
+
+.footer-custom .input::placeholder {
+    color: #a0a0a0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3f2a2a;
+    /* Línea divisoria */
+    padding-top: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2);
+    /* Iconos crecen al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+
+/* --- ESTILOS PARA LA NOTIFICACIÓN (TOAST) --- */
+
+.toast-notification {
+    position: fixed;
+    /* Se queda fija en la pantalla */
+    bottom: 20px;
+    /* A 20px del borde inferior */
+    right: 20px;
+    /* A 20px del borde derecho */
+    background-color: #2a1a1a;
+    /* Mismo color oscuro del navbar */
+    color: #f5f5dc;
+    /* Mismo color crema del texto */
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-left: 5px solid #d4ac6e;
+    /* Un borde dorado para darle un toque premium */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Se asegura de que esté por encima de todo */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    opacity: 0;
+    /* Empieza invisible */
+    transform: translateY(20px);
+    /* Empieza un poco más abajo */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Estilo para cuando la notificación se muestra */
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ESTILOS PARA LA NOTIFICACIÓN DE ÉXITO (TOAST) --- */
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2a1a1a;
+    color: #f5f5dc;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-left: 5px solid #48c78e;
+    /* Borde verde de éxito */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Espacio entre el ícono y el texto */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}

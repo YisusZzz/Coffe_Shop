@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <!-- Metadatos y enlaces a hojas de estilo externas y personalizadas. --> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Café Aromas de la Sierra</title>
+    <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Custom CSS -->    
+    <link rel="stylesheet" href="styleC.css">
+</head>
+
+<body>
+    <!-- Barra de navegación fija en la parte superior con enlaces a diferentes secciones. -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="cafeS.html"> <img src="LogoP.png" alt="Logo de Aromas de la Sierra">
+                    <span class="brand-text">Café Aromas de la Sierra</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="cafeS.html#contacto">
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Contacto</span>
+                </a>
+
+                <div class="navbar-item">
+                    <a href="cafeS.html#productos" class="button is-primary is-rounded">
+                        <strong>Comprar Ahora</strong>
+                    </a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="carrito.html" class="button is-info is-rounded">
+                        <span class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                        <span id="cart-counter" class="tag is-danger is-rounded" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal del carrito de compras con tabla de productos, total y botón de checkout. -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container">
+            <h1 class="title">Tu Carrito de Compras</h1>
+            <div class="box">
+                <table class="table is-fullwidth is-hoverable">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-container">
+                    </tbody>
+                </table>
+                <hr>
+                <div class="has-text-right">
+                    <h2 class="title is-4">Total: <span id="cart-total">$0.00</span></h2>
+                    <button id="checkout-button" class="button is-success is-large is-rounded">Confirmar Compra</button>
+                </div>
+            </div>
+            <div class="has-text-centered mt-4">
+                <a href="cafeS.html#productos">← Seguir comprando</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con formulario de suscripción al boletín informativo. -->
+    <footer class="footer footer-custom" id="contacto">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third">
+                </div>
+                <div class="column is-one-third">
+                </div>
+    
+                <div class="column is-one-third">
+                    <h4 class="title is-5 footer-title">Boletín Informativo</h4>
+                    <p>Recibe ofertas especiales, noticias sobre nuevas cosechas y consejos de preparación. ¡Suscríbete!</p>
+    
+                    <form id="newsletter-form">
+                        <div class="field mt-4">
+                            <div class="control">
+                                <input id="newsletter-email" class="input is-rounded" type="email"
+                                    placeholder="Tu correo electrónico" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button id="newsletter-button"
+                                    class="button is-primary is-rounded is-fullwidth">Suscribirse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmación de compra -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-background"></div>
+        <div class="modal-card" style="max-width: 450px;">
+            <header class="modal-card-head" style="background-color: #4a2c2a; border-bottom: none;">
+                <p class="modal-card-title" style="color: #f5f5dc;">Confirmar tu Pedido</p>
+            </header>
+            <section class="modal-card-body">
+                <p class="is-size-5">¿Estás seguro de que deseas finalizar tu compra?</p>
+                <p class="mt-3">El total de tu pedido es: <strong id="confirm-modal-total"></strong></p>
+            </section>
+            <footer class="modal-card-foot is-justify-content-flex-end">
+                <button id="confirm-cancel-button" class="button is-rounded">Cancelar</button>
+                <button id="confirm-buy-button" class="button is-success is-rounded">Sí, Comprar Ahora</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Importación de scripts externos y personalizados -->
+    <script src="cafeS.html"></script>
+    <script src="carrito.js"></script>
+</body>
+
+</html>
