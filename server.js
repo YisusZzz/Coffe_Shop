@@ -22,13 +22,11 @@ const db = mysql.createPool({
 
 // 2. SERVIR ARCHIVOS ESTÁTICOS
 // Si tienes un index.html en una carpeta 'public', esto lo sirve en la raíz '/'
-app.use(express.static("."));
+
 
 // Ruta de prueba para la raíz (si no hay index.html en 'public')
 // Esto también ayuda a Vercel a saber que la app responde.
-app.get('/', (req, res) => {
-  res.send('API de Café Aromas de la Sierra funcionando ☕');
-});
+
 
 // --- TUS RUTAS API (Estas están bien) ---
 
