@@ -14,7 +14,7 @@ const db = mysql.createPool({
   user: process.env.DB_USER,      // Usará la variable de Vercel
   password: process.env.DB_PASSWORD, // Usará la variable de Vercel
   database: process.env.DB_NAME,  // Usará la variable de Vercel
-  port: process.env.DB_PORT || 3306, // Usará la variable de Vercel
+  port: process.env.DB_PORT || 55367, // Usará la variable de Vercel
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -22,7 +22,7 @@ const db = mysql.createPool({
 
 // 2. SERVIR ARCHIVOS ESTÁTICOS
 // Si tienes un index.html en una carpeta 'public', esto lo sirve en la raíz '/'
-app.use(express.static("public"));
+app.use(express.static("."));
 
 // Ruta de prueba para la raíz (si no hay index.html en 'public')
 // Esto también ayuda a Vercel a saber que la app responde.
